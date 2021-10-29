@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/styles'
-import bglogin from './../../assets/images/bglogin.jpg'
+import bglogin from './../../assets/images/bgsignup.jpg'
 
 export const useStyles = makeStyles((theme) => ({
     root: {

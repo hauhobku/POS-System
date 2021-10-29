@@ -4,7 +4,7 @@ export const useStyles = makeStyles((theme) => ({
     root: {
         position: 'fixed',
         width: 420,
-        height: 483,
+        height: 513,
         border: '1px solid #ddd',
         top: 130,
         right: 0,
@@ -49,17 +49,16 @@ export const useStyles = makeStyles((theme) => ({
     },
     footer: {
         width: '100%',
-        height: '80px',
+        height: '110px',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: '#fffbf7',
     },
     box: {
         width: '80%',
     },
     total: {
-        height: '30px',
+        height: '40px',
         width: '100%',
         display: 'flex',
         alignItems: 'center',

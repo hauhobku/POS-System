@@ -5,7 +5,7 @@ import Productlist from './../../components/productlist/productlist.component'
 function Menu() {
     return (
         <div>
-            <div style={{height: '130px'}}></div>
+            <div style={{height: '100px'}}></div>
             <Cart/>
             <Productlist num={4} name={'Menu'}/>
         </div>

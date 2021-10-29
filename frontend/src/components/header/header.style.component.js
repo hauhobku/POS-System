@@ -3,7 +3,7 @@ import { makeStyles } from '@mui/styles'
 export const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
-        height: 130,
+        height: 100,
         borderBottom: '1px solid #ddd',
         position: 'fixed',
         backgroundColor: 'white',
@@ -24,7 +24,7 @@ export const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         '& img': {
-            height: 75,
+            height: 65,
         }
     },
     search: {

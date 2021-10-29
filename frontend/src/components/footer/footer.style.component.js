@@ -3,7 +3,7 @@ import { makeStyles } from '@mui/styles'
 export const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
-        height: 100,
+        height: 70,
         backgroundColor: '#2b9077',
     },
     container: {
@@ -17,6 +17,9 @@ export const useStyles = makeStyles((theme) => ({
     },
     logo: {
         width: '20%',
+        '& img': {
+            height: '50px',
+        }
     },
     mid: {
         width: '60%',
