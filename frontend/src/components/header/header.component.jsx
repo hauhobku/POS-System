@@ -9,10 +9,18 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Stack, Badge  } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import HomeIcon from '@mui/icons-material/Home';
 
 function LoginComponent() {
     return (
         <Stack spacing={2} direction="row">
+            
+            <Link to="/">
+                <Button>
+                    <HomeIcon/>
+                </Button>
+            </Link>   
+            
             <Badge badgeContent={4} color="success">
                 <Link to="/user">
                     <Button>

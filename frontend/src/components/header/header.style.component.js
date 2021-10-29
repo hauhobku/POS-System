@@ -5,6 +5,10 @@ export const useStyles = makeStyles((theme) => ({
         width: '100%',
         height: 130,
         borderBottom: '1px solid #ddd',
+        position: 'fixed',
+        backgroundColor: 'white',
+        top: '0px',
+        zIndex: '1000',
     },
     container: {
         height: '100%',
