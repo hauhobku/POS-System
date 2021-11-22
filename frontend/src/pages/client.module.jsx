@@ -13,6 +13,7 @@ import Header from '../components/header/header.component';
 import Footer from '../components/footer/footer.component';
 import SignUp from './signup/signup.page';
 
+
 function Client() {
     return (
         <>
@@ -22,6 +23,7 @@ function Client() {
                 <Route path="/login" exact component={Login}/>
                 <Route path="/signup" exact component={SignUp}/>
                 <Route path="/menu" exact component={Menu}/>
+                
                 <Route path="/" exact component={Home}/>
                 <Route path="">
                     <Redirect/>

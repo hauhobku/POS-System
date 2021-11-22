@@ -29,13 +29,16 @@ export const useStyles = makeStyles((theme) => ({
             width: '90%',
             height: 'auto',
             transition: 'all 1s',
+            backgroundColor: 'white',
+            filter: 'white(100%)',
         },
         transition: 'all 0.5s',
         '&:hover': {
             '& img': {
                 transform: 'scale(1.25)',
             },
-        }
+        },
+        
     },
     evaluate: {
         '& svg': {
@@ -63,6 +66,14 @@ export const useStyles = makeStyles((theme) => ({
             '&:hover': {
                 backgroundColor: '#314068',
             }
+        },
+        '& a': {
+            textDecoration: 'none',
+            '& button': {
+                backgroundColor: '#314068',
+                color: 'white',
+                transition: '0.5s',
+            },
         }
     }
 }))

@@ -1,0 +1,62 @@
+[
+    {
+        "id": 2,
+        "name": "Bánh mỳ",
+        "img": "https://banhmipho.vn/wp-content/uploads/2021/03/ca-ngu.png",
+        "price": 10000
+    },
+    {
+        "id": 3,
+        "name": "Coffee",
+        "img": "https://cafedalat.net/wp-content/uploads/2020/10/cafe-den.png",
+        "price": 20000
+    },
+    {
+        "id": 4,
+        "name": "Trà sữa",
+        "img": "https://khothietke.net/wp-content/uploads/2021/03/taifree1392-tra-sua-tran-chau.png",
+        "price": 25000
+    },
+    {
+        "id": 5,
+        "name": "Cocacola",
+        "img": "https://freepngimg.com/thumb/categories/943.png",
+        "price": 10000
+    },
+    {
+        "id": 6,
+        "name": "Khoai tây chiên",
+        "img": "https://inbaothuhcm.files.wordpress.com/2017/09/in-bao-bi-giay-dung-khoai-tay-chien.png?w=640",
+        "price": 15000
+    },
+    {
+        "id": 7,
+        "name": "Gà rán",
+        "img": "https://mcdonalds.vn/uploads/2018/2-ga-ran.png",
+        "price": 25000
+    },
+    {
+        "id": 9,
+        "name": "Bún đậu mắm tôm",
+        "img": "https://bundau3mien.vn/images/product/20201118101829_PH%E1%BA%A6N%20B%C3%9AN%20%C4%90%E1%BA%ACU%20H%E1%BB%A6%20CH%E1%BA%A2%20C%E1%BB%90M%2038K%20T%C3%81CH%20N%E1%BB%80N.png",
+        "price": 30000
+    },
+    {
+        "id": 10,
+        "name": "Mỳ Ý",
+        "img": "https://jollibee.com.vn/uploads/dish/7b8e79a673f041-1840007_01myylon.png",
+        "price": 20000
+    },
+    {
+        "id": 11,
+        "name": "Sting",
+        "img": "https://cooponline.vn/wp-content/uploads/2020/05/nuoc-tang-luc-sting-dau-lon-cao-330ml.jpg",
+        "price": 10000
+    },
+    {
+        "id": 12,
+        "name": "Nước tinh khiết",
+        "img": "https://lavieviva.vn/wp-content/uploads/2018/09/Nuoc-Lavie-500ml-1.png",
+        "price": 10000
+    }
+]

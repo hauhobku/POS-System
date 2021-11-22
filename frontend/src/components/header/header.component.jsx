@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from 'react'
+import React from 'react'
 import { useStyles } from './header.style.component'
 import { Container } from '@mui/material'
 import { Link } from 'react-router-dom'
@@ -10,8 +10,22 @@ import { Stack, Badge  } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import HomeIcon from '@mui/icons-material/Home';
+import { useSelector } from 'react-redux';
+import LogoutIcon from '@mui/icons-material/Logout';
+
+import { logoutAction } from './../../reducer/accountReducer';
+import { useDispatch } from 'react-redux';
+
+import { setviewfood } from './../../reducer/viewFoodReducer';
 
 function LoginComponent() {
+    const dispatch = useDispatch();
+    const handleLogout = () => {
+        dispatch(logoutAction());
+    }
+
+    const Cart = useSelector(state => state.Cart);
+
     return (
         <Stack spacing={2} direction="row">
             
@@ -21,38 +35,53 @@ function LoginComponent() {
                 </Button>
             </Link>   
             
-            <Badge badgeContent={4} color="success">
-                <Link to="/user">
-                    <Button>
-                        <PersonIcon/>
-                    </Button>
-                </Link>
-            </Badge>
-            <Badge badgeContent={4} color="success">
+            <Link to="/user">
+                <Button>
+                    <PersonIcon/>
+                </Button>
+            </Link>
+
+            <Badge badgeContent={Cart.foods.length} color="success">
                 <Link to="/menu">
                     <Button>
                         <ShoppingCartIcon/>
                     </Button>
                 </Link>
             </Badge>
+
+            <Link to="/">
+                <Button onClick={handleLogout}>
+                    <LogoutIcon/>
+                </Button>
+            </Link>
         </Stack>
     )
 }
 
-function LoginButton(props) {
+function LoginButton() {
     const classes = useStyles();
     return (
         <div className={classes.ButtonLogin}>
             <Link to="/login">
-                <Button onClick={() => props.setLogin(true)}>SIGN IN</Button>
+                <Button>SIGN IN</Button>
             </Link>
         </div>
     )
 }
 
 function Header() {
-    const [login, setLogin] = useState(false);
     const classes = useStyles();
+    const dispatch = useDispatch();
+
+    const acc = useSelector(state => state.Account.acc);
+
+    var search = '';
+
+    const handleChangeSearch = (e) => {
+        search = e.target.value;
+        dispatch(setviewfood(search));
+    }
+
     return (
         <div className={classes.root}>
             <Container className={classes.container}>
@@ -68,10 +97,10 @@ function Header() {
                                 Search All Categories
                             </div>
                             <div className={classes.mid}>
-                                <form action="/" autocomplete="off">
-                                    <input className={classes.input} type="text" name="search" id="search" placeholder="I'm looking for..."></input>
+                                <form action="" autoComplete="off">
+                                    <input onChange={handleChangeSearch} className={classes.input} type="text" name="search" id="search" placeholder="I'm looking for..."></input>
                                     <div className={classes.buttonfield}>
-                                        <Button size="large" type="submit">
+                                        <Button size="large">
                                             <SearchIcon/>
                                         </Button>
                                     </div>
@@ -80,7 +109,7 @@ function Header() {
                         </div>
                     </div>
                     <div className={classes.user}>
-                        {login ? <LoginComponent/> : <LoginButton setLogin={setLogin}/>}
+                        {(acc.email === "") ? <LoginButton/> : <LoginComponent/>}
                     </div>
                 </div>
             </Container>

@@ -8,7 +8,7 @@ function Home() {
         <div>
             <div style={{height: '10px'}}></div>
             <Banner></Banner>
-            <Productlist num={3} name={'Featured Products'}/>
+            <Productlist num={3} name={'Menu'}/>
         </div>
     )
 }
